@@ -1,20 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './index.css'
-import App from './App'
+import './styles/index.css'
+import App from './components/App'
 import registerServiceWorker from './registerServiceWorker'
 import firebase from 'firebase'
 
-const config = {
-  apiKey: 'AIzaSyDymabT-_-RvAnnOk8k3igLfMH0KIsXAaY',
-  authDomain: 'resume-86d3f.firebaseapp.com',
-  databaseURL: 'https://resume-86d3f.firebaseio.com',
-  projectId: 'resume-86d3f',
-  storageBucket: 'resume-86d3f.appspot.com',
-  messagingSenderId: '500784285774'
-}
+import { firebaseConfig } from './constants/firebase'
 
-const fb = firebase.initializeApp(config).database().ref()
+const fb = firebase.initializeApp(firebaseConfig).database().ref()
 
 fb.on('value', snapshot => {
   const store = snapshot.val()
