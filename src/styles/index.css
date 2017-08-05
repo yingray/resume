@@ -1,6 +1,7 @@
 @import url('./normalize.css');
 @import url('https://fonts.googleapis.com/css?family=Avenir');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('./project.css');
 
 body {
   margin: 0;

@@ -2,16 +2,20 @@ import React, { Component } from 'react'
 import Experience from './Experience'
 import Education from './Education'
 import Skills from './Skills'
+import Certifications from './Certifications'
+import Projects from './Projects'
 
 class App extends Component {
   render() {
     const {
       data: {
         avatar,
+        certifications,
         profile: { email, github, linkedin, description },
         name,
         experience,
         education,
+        projects,
         skills,
         icons
       }
@@ -49,6 +53,11 @@ class App extends Component {
         <hr />
         <h2>Skills</h2>
         <Skills description={skills} icon={icons.skillItem} />
+        <hr />
+        <h2>Certifications</h2>
+        <Certifications description={certifications} icon={icons.cerItem} />
+        <hr />
+        <Projects {...projects} />
       </main>
     )
   }
