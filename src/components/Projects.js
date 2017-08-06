@@ -8,20 +8,16 @@ const Projects = props => {
       {_.map(props, project => {
         return <div className="c-project__card">
         <h3 className="c-project__title">
-          PAWEES 2017 International Conference Registration System (Node.js)
+          {project.name}
         </h3>
         <p className="c-project__date">
-          
+          {project.date}
         </p>
-        <a href="https://pawees.info" target="_blank">
-          https://pawees.info
+        <a href={project.link} target="_blank" rel="noopener noreferrer">
+          {project.link}
         </a>
         <p>
-          Jabong is an online social networking service which was launched on April 1, 2016 in
-          Taipei Tech Extension, School of Continuing Eduction. The web client side design used
-          bootstrap, javascript, j-query. In order to display friends-food-map, using the third
-          party API such as Google Places API. The server side used Java servlet, Maven project,
-          DAO, MVC structure design, Tomcat Apache, MySQL database.
+          {project.description}
         </p>
       </div>
       })}

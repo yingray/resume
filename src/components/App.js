@@ -22,7 +22,7 @@ class App extends Component {
     } = this.props
     return (
       <main className="App">
-        {avatar && <img className="avatar" src={avatar} />}
+        {avatar && <img className="avatar" alt="avatar" src={avatar} />}
         <h1>
           {name}
         </h1>
@@ -42,7 +42,12 @@ class App extends Component {
         <hr />
         <h2>Profile</h2>
         <p>
-          {description}
+          {description.split('\n').map((item, key) =>
+            <span key={key}>
+              {item}
+              <br />
+            </span>
+          )}
         </p>
         <hr />
         <h2>Experience</h2>
