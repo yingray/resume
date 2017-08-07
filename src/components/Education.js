@@ -5,8 +5,9 @@ const Education = props => {
   return (
     <div>
       <h3>
-        {school} - {degree}  {year}
+        {degree}
       </h3>
+      <p>{school} {year}</p>
     </div>
   )
 }

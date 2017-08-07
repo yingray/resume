@@ -6,9 +6,9 @@ const Skills = props => {
   return (
     <div>
       {_.map(description, element =>
-        <p>
-          <i className="material-icons">{icon}</i> {element}
-        </p>
+        <span>
+          <i className="material-icons">{icon}</i> {element}&nbsp;&nbsp;
+        </span>
       )}
     </div>
   )

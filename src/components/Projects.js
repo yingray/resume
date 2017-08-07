@@ -17,7 +17,15 @@ const Projects = props => {
           {project.link}
         </a>
         <p>
-          {project.description}
+        
+        {project.description.split('\n').map((item, key) => {
+          return (
+            <span key={key}>
+              {item}
+              <br />
+            </span>
+          )
+        })}
         </p>
       </div>
       })}

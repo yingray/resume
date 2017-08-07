@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Nav from './Nav'
 import Experience from './Experience'
 import Education from './Education'
 import Skills from './Skills'
@@ -22,6 +23,7 @@ class App extends Component {
     } = this.props
     return (
       <main className="App">
+        <Nav />
         {avatar && <img className="avatar" alt="avatar" src={avatar} />}
         <h1>
           {name}

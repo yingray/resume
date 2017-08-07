@@ -1,18 +1,39 @@
 @import url('./normalize.css');
-@import url('https://fonts.googleapis.com/css?family=Avenir');
+/* @import url('https://fonts.googleapis.com/css?family=Avenir'); */
+@import url('https://fonts.googleapis.com/css?family=Lora|Gilda+Display');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 @import url('./project.css');
 
 body {
   margin: 0;
   padding: 0;
-  font-family: Avenir;
-  /* font-family: 'Roboto', serif; */
+  font-family: 'Gilda Display', 'Lora', serif;
   text-align: justify;
   background-color: #f1f2f2;
+  color: #333333;
 }
 a {
-  color: black;
+  color: #333333;
+}
+
+nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+nav > button {
+  border: 0;
+  background: #eee;
+  color: #333;
+  cursor: pointer;
+}
+
+nav > button:hover {
+  border: 0;
+  background: #ccc;
+  color: #333;
+  cursor: pointer;
 }
 
 .avatar {
@@ -38,6 +59,7 @@ hr {
 
 main {
   /* border: solid 1px #888; */
+  position: relative;
   margin: 70px auto;
   padding: 30px;
   max-width: 800px;
